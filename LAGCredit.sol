@@ -52,7 +52,7 @@ contract LAGCredit {
         assert(balances[_from] + balances[_to] == previousBalances);  
     }
     
-    // 消費獲得积分的函数，内部函数
+    // 消費獲得积分的函数
     function _expenses(address _customer, uint _amount, uint _rate, bool _first) public {
 
         require(
@@ -91,7 +91,7 @@ contract LAGCredit {
         assert(balances[bookStore] + balances[_customer] == previousBalances);  
     }
 
-    // 积分的兌換函数，内部函数
+    // 积分的兌換函数
     function _exchange(address _customer, uint _amount, uint _rate) public returns (uint leftAmount_){
 
         require(
